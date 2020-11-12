@@ -23,6 +23,7 @@ def kategori(val):
                 flagOdd += 1
 
         else:
+            flagEven += 1
             flagZeroes += 1
     
     return flagNegative, flagPositive, flagZeroes, flagEven, flagOdd
