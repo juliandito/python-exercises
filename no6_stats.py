@@ -1,10 +1,17 @@
 def stats(val):
-    smallest = min(val)
-    largest = max(val)
-    total = sum(val)
-    average = total / len(val)
-    return smallest, largest, total, average
 
+    smallest = val[0]
+    largest = 0
+    total = 0
+
+    for i in range(0, len(val)):
+        total += val[i]
+        if val[i] > largest:
+            largest = val[i]
+        elif val[i] < smallest:
+            smallest = val[i]
+
+    return smallest, largest, total, total/len(val)
 
 
 from no4_random import rand
