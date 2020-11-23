@@ -11,7 +11,9 @@ def driver_function(ans_str):
     
     return (20-wrongAns), wrongAns, wrong_ans_list
 
-result = driver_function("A A A A B B B B C C C C D D D D E E E E")
+
+inputUser = input("Masukkan list jawaban, uppercase : ")
+result = driver_function(inputUser)
 print("benar: ", result[0])
 print("salah: ", result[1])
 print("list salah: ", result[2])

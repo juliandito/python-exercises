@@ -6,13 +6,13 @@ def frequency(input_str):
         else: 
             all_freq[i] = 1
     
-    highest_freq = max(all_freq.values())       #cari max valuenya
+    highest_freq = max(all_freq.values()) #cari max valuenya
+    highest_freq_char = []     
     for freq_char, freq in all_freq.items():    #cari huruf yang punya value = highest_freq
         if freq == highest_freq:
-            highest_freq_char = freq_char
-            break                               #kalo udah ketemu satu langsung berhenti
+            highest_freq_char.append(freq_char)
 
-    return highest_freq_char                    
+    return highest_freq_char[0]                    
 
 stringInput = input("Masukkan string: ")
 print("Most freq: ", frequency(stringInput))
