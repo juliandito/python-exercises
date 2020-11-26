@@ -3,7 +3,7 @@ def costumer_id(fh, idc):
     loop_pencarian = True
 
     iterator = 1                            # iterator buat ngecek posisi
-    jumlah_lines = sum(1 for line in fh)    # cari jumlah lines, dipisah dari while pencarian biar hemat memory
+    jumlah_lines = sum(1 for line in fh)    # cari jumlah lines, dipisah dari while pencarian biar hemat memori
     fh.seek(0)                              # balikin posisi jadi 0 lagi
 
     while loop_pencarian:

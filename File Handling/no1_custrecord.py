@@ -3,7 +3,7 @@ def costumer_record(fh, n):
     for i in range(0, n):
         read = fh.readline()
         if i+1 == n:
-            result = read.replace("\n","").split(",")
+            result = read.replace("\n","").split(",")   # read sebagai list of string
 
     return result
 
