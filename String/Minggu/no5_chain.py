@@ -56,5 +56,5 @@ def is_chain(list_of_string):
 
 
 #test
-list_test = ["camel", "leopard", "frog", "goat"]
+list_test = ["camel", "leopard", "dog", "giraffe", "elephant"]
 print("kata: ",is_chain(list_test))
