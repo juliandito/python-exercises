@@ -31,25 +31,29 @@ def words_matrix(string):
 # method buat nemu
 def find_diagonal(matrix, word):
 
-    position = "Not found"
+    rev_word = list(word)[2] + (list(word)[1]) + (list(word)[0])
 
-    # 0.0 ke n.n
+    position = False
+
+    # atas ke bawah 
     for i in range(0, len(matrix)):
         word_from_list = ""
         for j in range(0, len(matrix[i])):
             word_from_list += matrix[j][j]
 
-        if word_from_list == word:
-            position = "Found"
+        if word_from_list == word or word_from_list == rev_word:
+            position = True
     
-    # # n.0 ke n.0
-    # for i in range(len(matrix)-1, 0, -1):
-    #     word_from_list = ""
-    #     for j in range(0, len(matrix[i])):
-    #         word_from_list += matrix[j][j]
+    # bawah ke atas
+    for i in range(0, len(matrix)):
+        word_from_list = ""
+        k = 0
+        for j in range(len(matrix[i])-1, -1, -1):
+            word_from_list += matrix[j][k]
+            k += 1
 
-    #     if word_from_list == word:
-    #         position = "Found"
+        if word_from_list == word or word_from_list == rev_word:
+            position = True
 
     return position
 
@@ -61,4 +65,4 @@ print(string)
 matrix = words_matrix(string)
 
 val = input("kata yang dicari: ")
-print("Status: ", find_diagonal(matrix, val))
+print("Ditemukan: ", find_diagonal(matrix, val))
