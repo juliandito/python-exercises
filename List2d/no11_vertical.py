@@ -31,20 +31,27 @@ def words_matrix(string):
 # method buat nemu
 def find_vertical(matrix, word):
 
-    position = None
-    for i in range(0, len(matrix)):
+    position = []
+    if len(matrix[0]) == 1:
         word_from_list = ""
-        for j in range(0, 3):
-            word_from_list += matrix[j][i]
-            
-        if word_from_list == word:
-            position = i
+        for i in range(0, len(matrix)):
+            word_from_list += matrix[i][0]
+            if word_from_list == word:
+                position.append(i)
+    else:
+        for i in range(0, len(matrix)):
+            word_from_list = ""
+            for j in range(0, len(matrix[i])):
+                word_from_list += matrix[j][i]
+                
+            if word_from_list == word:
+                position.append(i)
 
     return position
 
 
 # testing
-string = ["a", "a", "a"]
+string = ["cdb", "aoi", "tgg"]
 print(string)
 
 matrix = words_matrix(string)
