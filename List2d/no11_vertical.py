@@ -34,7 +34,7 @@ def find_vertical(matrix, word):
     position = None
     for i in range(0, len(matrix)):
         word_from_list = ""
-        for j in range(0, len(matrix[i])):
+        for j in range(0, 3):
             word_from_list += matrix[j][i]
             
         if word_from_list == word:
@@ -44,7 +44,7 @@ def find_vertical(matrix, word):
 
 
 # testing
-string = ["cdb", "aoi", "tgg"]
+string = ["a", "a", "a"]
 print(string)
 
 matrix = words_matrix(string)

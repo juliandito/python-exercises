@@ -30,8 +30,10 @@ def words_matrix(string):
 
 # method buat nemu
 def find_diagonal(matrix, word):
-
-    rev_word = list(word)[2] + (list(word)[1]) + (list(word)[0])
+    
+    rev_word = ""
+    for i in range(len(list(word))-1, -1, -1):
+        rev_word += str(list(word)[i])
 
     position = False
 
