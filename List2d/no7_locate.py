@@ -15,12 +15,6 @@ def print_matrix(rows, cols, high, low, value_type):
             col_list.append(rand_num)
 
         result_list.append(col_list)
-    
-    # cara 2
-    # if value_type == "float":
-    #     result_list = [[random.uniform(float(low), float(high)) for i in range(cols)] for j in range(rows)]
-    # elif value_type == "int":
-    #     result_list = [[random.randint(low, high) for i in range(cols)] for j in range(rows)]
 
     for i in range(0, cols):
         print("\t", i, end="")
