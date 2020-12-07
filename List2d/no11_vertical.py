@@ -37,7 +37,7 @@ def find_vertical(matrix, word):
         for i in range(0, len(matrix)):
             word_from_list += matrix[i][0]
             if word_from_list == word:
-                position.append(i)
+                position.append(0)
     else:
         for i in range(0, len(matrix)):
             word_from_list = ""
