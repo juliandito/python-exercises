@@ -8,7 +8,7 @@ def add_2d_list(mtx1, mtx2):
     
     return result
 
-input_num = input("Input 12 numbers: ").split()
+input_num = input("Input 12 numbers: ").split("")
 matrix1 = []
 matrix2 = []
 
